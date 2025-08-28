@@ -13,7 +13,7 @@ public class AuthService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
-    private final JwtService jwtService; // Change 1: Added this line
+    private final JwtService jwtService;
 
     public User signUp(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
@@ -29,7 +29,6 @@ public class AuthService {
             throw new RuntimeException("Invalid email or password");
         }
 
-        // Change 2: Replaced the placeholder token with a real JWT
         return jwtService.generateToken(user.getUsername());
     }
 }

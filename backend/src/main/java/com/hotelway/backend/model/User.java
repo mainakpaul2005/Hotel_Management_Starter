@@ -39,7 +39,7 @@ public class User implements UserDetails {
     }
 
     @Override
-    public String getPassword() { // This was the missing method
+    public String getPassword() {
         return password;
     }
 
@@ -66,5 +66,13 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 }

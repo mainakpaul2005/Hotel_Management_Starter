@@ -1,4 +1,4 @@
-package com.hotelway.backend.controller; // Assuming this is the correct package
+package com.hotelway.backend.controller;
 
 import com.hotelway.backend.model.Hotel;
 import com.hotelway.backend.repository.HotelRepository;

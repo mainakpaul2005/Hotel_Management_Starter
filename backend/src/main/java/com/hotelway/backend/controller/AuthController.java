@@ -1,4 +1,4 @@
-package com.hotelway.backend.controller; // This line was changed
+package com.hotelway.backend.controller;
 
 import com.hotelway.backend.model.User;
 import com.hotelway.backend.service.AuthService;
