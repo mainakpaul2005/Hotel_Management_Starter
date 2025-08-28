@@ -1,6 +1,5 @@
 package com.hotelway.backend.service;
 
-import com.hotelway.backend.model.User;
 import com.hotelway.backend.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

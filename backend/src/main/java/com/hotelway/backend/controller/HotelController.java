@@ -1,3 +1,12 @@
+package com.hotelway.backend.controller;
+
+import com.hotelway.backend.model.Hotel;
+import com.hotelway.backend.service.HotelService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/hotels")
 @RequiredArgsConstructor

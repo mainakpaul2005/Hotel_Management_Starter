@@ -1,9 +1,10 @@
+package com.hotelway.backend.controller; // Assuming this is the correct package
+
+import com.hotelway.backend.model.Hotel;
+import com.hotelway.backend.repository.HotelRepository;
 import org.springframework.web.bind.annotation.*;
 import lombok.RequiredArgsConstructor;
 import java.util.List;
-
-
-
 
 @RestController
 @RequestMapping("/api/admin")

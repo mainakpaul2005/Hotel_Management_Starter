@@ -1,7 +1,7 @@
-package com.example.demo.controller;
+package com.hotelway.backend.controller; // This line was changed
 
-import com.example.demo.model.User;
-import com.example.demo.service.AuthService;
+import com.hotelway.backend.model.User;
+import com.hotelway.backend.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
