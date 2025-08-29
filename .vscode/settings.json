@@ -1,0 +1,6 @@
+{
+    "java.compile.nullAnalysis.mode": "automatic",
+    "workbench.colorCustomizations": {
+        "editorInfo.foreground": "#0080ff6a"
+    }
+}
