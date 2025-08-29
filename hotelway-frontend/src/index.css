@@ -1,17 +1,21 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Inter';
+        src: url('./assets/fonts/Inter.woff') format('woff2');
+
+    }
+    @font-face {
+        font-family: 'Druk Wide';
+        src: url('./assets/fonts/Druk.woff') format('woff2');
+
+    }
+
+}
+
+body {
+    @apply bg-white text-dark-text;
+}
