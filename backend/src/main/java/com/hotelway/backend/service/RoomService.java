@@ -1,3 +1,4 @@
+// src/main/java/com/hotelway/backend/service/RoomService.java
 package com.hotelway.backend.service;
 
 import com.hotelway.backend.model.Hotel;
@@ -33,7 +34,7 @@ public class RoomService {
         Room room = roomRepo.findById(roomId)
                 .orElseThrow(() -> new RuntimeException("Room not found"));
 
-        room.setRoomType(roomDetails.getRoomType());
+        room.setRoomNumber(roomDetails.getRoomNumber()); // Use the correct method
         room.setPrice(roomDetails.getPrice());
         return roomRepo.save(room);
     }

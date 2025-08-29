@@ -3,7 +3,11 @@ package com.hotelway.backend.model;
 import jakarta.persistence.*;
 import lombok.*;
 import java.math.BigDecimal;
-
+//...
+@Enumerated(EnumType.STRING)
+@Builder.Default // Add this annotation
+private RoomStatus status = RoomStatus.AVAILABLE;
+        //...
 @Entity
 @Getter
 @Setter

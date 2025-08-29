@@ -1,3 +1,4 @@
+// src/main/java/com/hotelway/backend/service/CustomUserDetailsService.java
 package com.hotelway.backend.service;
 
 import com.hotelway.backend.repository.UserRepository;
@@ -17,7 +18,8 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return userRepository.findByUsername(username)
-                .orElseThrow(() -> new UsernameNotFoundException("User not found: " + username));
+        // We now use phone number for authentication
+        return userRepository.findByPhoneNumber(username)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found with phone number: " + username));
     }
 }

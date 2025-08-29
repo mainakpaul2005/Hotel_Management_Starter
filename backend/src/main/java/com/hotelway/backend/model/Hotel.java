@@ -5,6 +5,11 @@ import lombok.*;
 
 import java.util.List;
 
+//...
+@Enumerated(EnumType.STRING)
+@Builder.Default // Add this annotation
+private HotelStatus status = HotelStatus.PENDING;
+        //...
 @Entity
 @Getter
 @Setter

@@ -4,6 +4,10 @@ import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
 
+//...
+@Builder.Default // Add this annotation
+private LocalDateTime createdAt = LocalDateTime.now();
+        //...
 @Entity
 @Getter
 @Setter
