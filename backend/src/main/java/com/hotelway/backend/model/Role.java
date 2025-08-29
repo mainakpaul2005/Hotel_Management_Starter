@@ -1,6 +1,7 @@
 package com.hotelway.backend.model;
 
 public enum Role {
-    USER,
+    CUSTOMER,
+    OWNER,
     ADMIN
 }

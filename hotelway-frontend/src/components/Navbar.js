@@ -4,12 +4,17 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        <header className="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <header className="bg-white/80 backdrop-blur-xl sticky top-0 z-50 border-b border-gray-200">
             <nav className="container mx-auto px-6 py-3">
                 <div className="flex items-center justify-between">
                     <NavLink to="/" className="text-2xl font-bold text-dark-text font-display tracking-wider">
                         HotelWay
                     </NavLink>
+                    <div className="hidden md:flex items-center space-x-6">
+                        <NavLink to="/" className="text-gray-600 hover:text-primary font-semibold">Home</NavLink>
+                        <NavLink to="/owner/dashboard" className="text-gray-600 hover:text-primary font-semibold">Hotel Portal</NavLink>
+                        <NavLink to="/admin/dashboard" className="text-gray-600 hover:text-primary font-semibold">Admin Portal</NavLink>
+                    </div>
                     <div className="flex items-center space-x-4">
                         <NavLink to="/login" className="text-gray-600 hover:text-primary font-semibold">Login</NavLink>
                         <NavLink to="/signup" className="bg-primary text-white font-semibold px-4 py-2 rounded-lg hover:bg-accent transition-colors duration-300">

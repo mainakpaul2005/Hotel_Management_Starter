@@ -1,3 +1,4 @@
+// src/pages/HomePage.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -22,7 +23,7 @@ const HomePage = () => {
                 </p>
                 <div className="mt-10">
                     <Link
-                        to="/destinations"
+                        to="/hotels" // Changed this to a more specific link
                         className="bg-primary text-white font-bold py-4 px-10 rounded-full text-lg uppercase hover:bg-accent transition-all duration-300 ease-in-out transform hover:scale-110 shadow-lg"
                     >
                         Book Now

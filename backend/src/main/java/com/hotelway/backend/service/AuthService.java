@@ -17,16 +17,17 @@ public class AuthService {
 
     public User signUp(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        user.setRole(Role.USER); // Default role is USER
+        // By default, new sign-ups are customers
+        user.setRole(Role.CUSTOMER);
         return userRepository.save(user);
     }
 
-    public String signIn(String email, String password) {
-        User user = userRepository.findByEmail(email)
-                .orElseThrow(() -> new RuntimeException("Invalid email or password"));
+    public String signIn(String phoneNumber, String password) {
+        User user = userRepository.findByPhoneNumber(phoneNumber)
+                .orElseThrow(() -> new RuntimeException("Invalid phone number or password"));
 
         if (!passwordEncoder.matches(password, user.getPassword())) {
-            throw new RuntimeException("Invalid email or password");
+            throw new RuntimeException("Invalid phone number or password");
         }
 
         return jwtService.generateToken(user.getUsername());
